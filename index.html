@@ -109,7 +109,6 @@
         <a href="mailto:pullurvenkateshwerreddy@gmail.com" class="nounderline">
           pullurvenkateshwerreddy@gmail.com
         </a>
-
         <div class="mail">Phone:</div>
         <div class="num">79xxxxxx58</div>
 
@@ -117,16 +116,31 @@
           <a href="venkateshPulluru.pdf" download class="resum_button">Download Resume</a>
         </div>
       </div>
+      <!-- Inside your <body> -->
+      <form id="contactForm" class="form" method="POST">
+        <!-- FormSubmit - to send to you -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_subject" value="New message from your portfolio!" />
+        <input type="hidden" name="_next" value="thankyou.html" /> <!-- Optional redirect -->
+        <input type="hidden" name="_cc" value="pullurvenkateshwerreddy@gmail.com" /> <!-- Sends copy to you -->
 
-      <form class="form" action="https://formsubmit.co/pullurvenkateshwerreddy@gmail.com" method="POST">
-        <!-- Form fields -->
+        <!-- EmailJS -->
+        <input type="hidden" id="to_name" name="to_name" />
+        <input type="hidden" id="to_email" name="to_email" />
+        <input type="hidden" id="user_message" name="user_message" />
+
         <input type="text" name="name" placeholder="Your Name" required class="space" />
         <input type="email" name="email" placeholder="Your Email" required class="space" />
-        <textarea name="message" rows="6" placeholder="Your message" required class="box"></textarea>
+        <textarea name="message" rows="6" placeholder="Your Message" required class="box"></textarea>
+
         <button type="submit" class="submit">Submit</button>
       </form>
+
     </div>
   </section>
+
+
 
 
   <!-- Footer -->
@@ -141,6 +155,54 @@
       document.getElementById("navMenu").classList.toggle("open");
     }
   </script>
+  <!-- EmailJS -->
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("7EmVyxlVysXmST6W9");
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = this;
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        alert("❗ Please fill in all the fields.");
+        return;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        alert("❗ Please enter a valid email address.");
+        return;
+      }
+
+      // Set EmailJS template params
+      document.getElementById("to_name").value = name;
+      document.getElementById("to_email").value = email;
+      document.getElementById("user_message").value = message;
+
+      // Send confirmation to user
+      emailjs.send("Venkat01", "template_kvsu5yd", {
+        name: name,
+        email: email,
+        message: message
+      }).then(() => {
+        // Submit to FormSubmit after confirmation email is sent
+        form.submit();
+      }).catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("❌ Failed to send confirmation email. Please try again later.");
+      });
+    });
+  </script>
+
 </body>
 
 </html>
