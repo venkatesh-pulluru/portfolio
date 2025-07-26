@@ -7,26 +7,31 @@
   <title>My Portfolio</title>
 </head>
 <body>
-  <div class="menulist">
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    <div class="menu-items" id="menuItems">
-      <div id="one" class="menu"><a href="#venkat">Venkateshwer Reddy Pulluru</a></div>
-      <div id="two" class="menu"><a href="#home">Home</a></div>
-      <div id="three" class="menu"><a href="#about">About</a></div>
-      <div id="four" class="menu"><a href="#skills">Skills</a></div>
-      <div id="five" class="menu"><a href="#projects">Projects</a></div>
-      <div id="six" class="menu"><a href="#contact">Contact</a></div>
-    </div>
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">Venkateshwer Reddy</div>
+    <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links" id="navMenu">
+      <li class="close-btn" onclick="toggleMenu()">&times;</li>
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <li><a href="venkateshPulluru.pdf" download onclick="toggleMenu()">Resume</a></li>
+    </ul>
+  </nav>
 
+  <!-- Home Section -->
   <div class="home">
     <section id="home">
       <div id="hi" class="name">Hi,</div>
       <div id="venkat" class="name">I'M Venkatesh</div>
-      <div id="work" class="name">Front-End developer</div>
+      <div id="work" class="name">Front-End Developer</div>
     </section>
   </div>
 
+  <!-- About Section -->
   <div class="about">
     <section id="about">
       <div class="heading">About</div>
@@ -38,23 +43,21 @@
       <img src="mine.jpg" class="photo" />
     </div>
     <div class="aboutme">
-      <h1 id="venky" class="abo">I'M Venkateshwar Reddy Pulluru</h1>
+      <h1 id="venky">I'm Venkateshwar Reddy Pulluru</h1>
       <h3 id="stu">Student</h3>
-      <p class="abo">
-        I am a passionate final-year electronic and communication Engineering student at <i>Gurunanak institute of technical campus</i>,
-        eager to explore the ever-evolving world of technology. Driven by curiosity, I aim to understand and optimize software and systems
-        to solve real-world problems. I thrive in creative and logical environments, constantly enhancing my skills through hands-on
-        projects and internships.
+      <p>
+        I am a passionate final-year ECE student at <i>Gurunanak Institute of Technical Campus</i>, eager to explore tech and solve real-world problems through software development.
       </p>
-      <h2 id="edu" class="abo">Education</h2>
+      <h2 id="edu">Education</h2>
       <ul class="studies">
-        <li id="guru" class="abo"><b>B-TECH</b><br /><span>2022-2026</span><br />Gurunanak institute of technical campus ,Hydrabad</li>
-        <li id="cvraman" class="abo"><b>INTERMEDIATE</b><br /><span>2019-2021</span><br />CV raman junior college, Wanaparthy</li>
-        <li id="ssc" class="abo"><b>10th Standard</b><br /><span>2018-2019</span><br />RBVRR model high school, Wanaparthy</li>
+        <li><b>B-TECH</b><br>2022–2026<br>GNITC, Hyderabad</li>
+        <li><b>INTERMEDIATE</b><br>2019–2021<br>CV Raman Jr College, Wanaparthy</li>
+        <li><b>10th Standard</b><br>2018–2019<br>RBVRR Model High School, Wanaparthy</li>
       </ul>
     </div>
   </div>
 
+  <!-- Skills -->
   <section id="skills">
     <div class="skills">
       <div class="heading">Skills</div>
@@ -62,29 +65,28 @@
     <div class="part">
       <div class="skillstotal">
         <div class="dev">Development</div>
-        <div id="known" class="skillsknown">
-          <div id="html" class="lang">HTML</div>
-          <div id="css" class="lang">CSS</div>
-          <div id="javascript" class="lang">Javascript</div>
-          <div id="react" class="lang">React</div>
-          <div id="php" class="lang">PHP</div>
+        <div class="skillsknown">
+          <div class="lang">HTML</div>
+          <div class="lang">CSS</div>
+          <div class="lang">JavaScript</div>
+          <div class="lang">React</div>
+          <div class="lang">PHP</div>
         </div>
         <div class="dev">Programming</div>
         <div class="skillsknown">
-          <div id="java" class="lang">Java</div>
-          <div id="c" class="lang">C</div>
+          <div class="lang">Java</div>
+          <div class="lang">C</div>
         </div>
         <div class="dev">Databases</div>
         <div class="skillsknown">
-          <div id="sql" class="lang">SQL</div>
+          <div class="lang">SQL</div>
         </div>
       </div>
-      <div>
-        <img src="logo.jpg" class="skilling" />
-      </div>
+      <div><img src="logo.jpg" class="skilling" /></div>
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
     <div class="projects">
       <div class="heading">Projects</div>
@@ -92,6 +94,7 @@
     <div class="created">Projects will be updated soon</div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <div class="contact">
       <div class="heading">Contact</div>
@@ -99,39 +102,32 @@
     <div class="totalinformation">
       <div class="information">
         <div class="mail">Email:</div>
-        <div class="email">
-          <a href="mailto:pullurvenkateshwerreddy@gmail.com" class="nounderline">pullurvenkateshwerreddy@gmail.com</a>
-        </div>
+        <a href="mailto:pullurvenkateshwerreddy@gmail.com" class="nounderline">pullurvenkateshwerreddy@gmail.com</a>
         <div class="mail">Phone:</div>
         <div class="num">79xxxxxx58</div>
         <div class="resume">
-          <a href="Venkateshwar_Resume.docx" class="resum_button">Resume</a>
+          <a href="venkateshPulluru.pdf" download class="resum_button">Download Resume</a>
         </div>
       </div>
       <div class="form">
-        <div class="main">
-          <input type="text" placeholder="Name" class="space" />
-          <input type="email" placeholder="Email" class="space" />
-        </div>
-        <div class="search">
-          <textarea name="message" rows="8" cols="30" class="box" placeholder="Your message"></textarea>
-        </div>
-        <div>
-          <button type="submit" class="submit">Submit</button>
-        </div>
+        <input type="text" placeholder="Name" class="space" />
+        <input type="email" placeholder="Email" class="space" />
+        <textarea rows="6" class="box" placeholder="Your message"></textarea>
+        <button class="submit">Submit</button>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <div class="foot">
     <div class="year">@2025</div>
     <div class="foote">Venkateshwer Reddy Pulluru</div>
   </div>
 
+  <!-- Script -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("menuItems");
-      menu.classList.toggle("show");
+      document.getElementById("navMenu").classList.toggle("open");
     }
   </script>
 </body>
