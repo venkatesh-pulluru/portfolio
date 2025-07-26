@@ -169,8 +169,8 @@
 
       // 1. Send confirmation email to user using EmailJS
       emailjs.send("Venkat01", "template_kvsu5yd", {
-        to_name: name,
-        to_email: email,
+        name: name,
+        email: email,
         message: message,
       }).then(() => {
         // 2. Send form details to you using FormSubmit (hidden, no redirect)
