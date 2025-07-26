@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>My Portfolio</title>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar">
@@ -46,7 +48,8 @@
       <h1 id="venky">I'm Venkateshwar Reddy Pulluru</h1>
       <h3 id="stu">Student</h3>
       <p>
-        I am a passionate final-year ECE student at <i>Gurunanak Institute of Technical Campus</i>, eager to explore tech and solve real-world problems through software development.
+        I am a passionate final-year ECE student at <i>Gurunanak Institute of Technical Campus</i>, eager to explore
+        tech and solve real-world problems through software development.
       </p>
       <h2 id="edu">Education</h2>
       <ul class="studies">
@@ -99,24 +102,32 @@
     <div class="contact">
       <div class="heading">Contact</div>
     </div>
+
     <div class="totalinformation">
       <div class="information">
         <div class="mail">Email:</div>
-        <a href="mailto:pullurvenkateshwerreddy@gmail.com" class="nounderline">pullurvenkateshwerreddy@gmail.com</a>
+        <a href="mailto:pullurvenkateshwerreddy@gmail.com" class="nounderline">
+          pullurvenkateshwerreddy@gmail.com
+        </a>
+
         <div class="mail">Phone:</div>
         <div class="num">79xxxxxx58</div>
+
         <div class="resume">
           <a href="venkateshPulluru.pdf" download class="resum_button">Download Resume</a>
         </div>
       </div>
-      <div class="form">
-        <input type="text" placeholder="Name" class="space" />
-        <input type="email" placeholder="Email" class="space" />
-        <textarea rows="6" class="box" placeholder="Your message"></textarea>
-        <button class="submit">Submit</button>
-      </div>
+
+      <form class="form" action="https://formsubmit.co/pullurvenkateshwerreddy@gmail.com" method="POST">
+        <!-- Form fields -->
+        <input type="text" name="name" placeholder="Your Name" required class="space" />
+        <input type="email" name="email" placeholder="Your Email" required class="space" />
+        <textarea name="message" rows="6" placeholder="Your message" required class="box"></textarea>
+        <button type="submit" class="submit">Submit</button>
+      </form>
     </div>
   </section>
+
 
   <!-- Footer -->
   <div class="foot">
@@ -131,4 +142,5 @@
     }
   </script>
 </body>
+
 </html>
