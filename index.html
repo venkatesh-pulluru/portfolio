@@ -116,23 +116,17 @@
           <a href="venkateshPulluru.pdf" download class="resum_button">Download Resume</a>
         </div>
       </div>
-      <!-- Inside your <body> -->
-      <form id="contactForm" class="form" method="POST">
-        <!-- FormSubmit - to send to you -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_subject" value="New message from your portfolio!" />
-        <input type="hidden" name="_next" value="thankyou.html" /> <!-- Optional redirect -->
-        <input type="hidden" name="_cc" value="pullurvenkateshwerreddy@gmail.com" /> <!-- Sends copy to you -->
-
-        <!-- EmailJS -->
-        <input type="hidden" id="to_name" name="to_name" />
-        <input type="hidden" id="to_email" name="to_email" />
-        <input type="hidden" id="user_message" name="user_message" />
-
+      <!-- Form Section -->
+      <form id="contactForm" class="form">
+        <!-- User Inputs -->
         <input type="text" name="name" placeholder="Your Name" required class="space" />
         <input type="email" name="email" placeholder="Your Email" required class="space" />
         <textarea name="message" rows="6" placeholder="Your Message" required class="box"></textarea>
+
+        <!-- FormSubmit Hidden Fields -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_subject" value="New Message from Portfolio!" />
 
         <button type="submit" class="submit">Submit</button>
       </form>
@@ -156,13 +150,9 @@
     }
   </script>
   <!-- EmailJS -->
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
-    // Initialize EmailJS
-    (function () {
-      emailjs.init("7EmVyxlVysXmST6W9");
-    })();
+    emailjs.init("7EmVyxlVysXmST6W9"); 
 
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -173,32 +163,44 @@
       const message = form.message.value.trim();
 
       if (!name || !email || !message) {
-        alert("❗ Please fill in all the fields.");
+        alert("❗ Please fill in all fields.");
         return;
       }
 
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!email.match(emailPattern)) {
-        alert("❗ Please enter a valid email address.");
-        return;
-      }
-
-      // Set EmailJS template params
-      document.getElementById("to_name").value = name;
-      document.getElementById("to_email").value = email;
-      document.getElementById("user_message").value = message;
-
-      // Send confirmation to user
+      // 1. Send confirmation email to user using EmailJS
       emailjs.send("Venkat01", "template_kvsu5yd", {
-        name: name,
-        email: email,
-        message: message
+        to_name: name,
+        to_email: email,
+        message: message,
       }).then(() => {
-        // Submit to FormSubmit after confirmation email is sent
-        form.submit();
-      }).catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("❌ Failed to send confirmation email. Please try again later.");
+        // 2. Send form details to you using FormSubmit (hidden, no redirect)
+        fetch("https://formsubmit.co/ajax/pullurvenkateshwerreddy@gmail.com", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message,
+            _subject: "New Message from Portfolio",
+            _template: "table",
+            _captcha: "false"
+          })
+        }).then(response => {
+          if (response.ok) {
+            alert("✅ Message sent! Confirmation email delivered.");
+            form.reset();
+          } else {
+            alert("❌ FormSubmit failed to deliver. Please try again.");
+          }
+        }).catch(() => {
+          alert("❌ FormSubmit error. Check your email or try again later.");
+        });
+
+      }).catch(() => {
+        alert("❌ EmailJS failed. Please try again later.");
       });
     });
   </script>
