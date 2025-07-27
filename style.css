@@ -50,6 +50,10 @@ body {
  .nav-links .close-btn {
     display: none;
   }
+  .created{
+    display: flex;
+    justify-content: center;
+  }
 
 .nav-links li a {
   color: white;
