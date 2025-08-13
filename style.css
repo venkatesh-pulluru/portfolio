@@ -27,12 +27,47 @@ body {
   top: 0;
   z-index: 1000;
 }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none; /* remove default underline */
+  color: white;
+  padding-bottom: 4px; /* space for underline */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px; /* underline thickness */
+  background:radial-gradient(rgb(72, 157, 176),rgb(221, 99, 203),rgb(228, 228, 126)); /* underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #64bdc7; /* optional: change text color */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; /* underline expands */
+}
+
+
 
 .brand {
   font-size: 22px;
   font-weight: bold;
   color: #64FFDA;
 }
+
 
 .nav-toggle {
   display: none;
@@ -84,6 +119,7 @@ body {
     padding-top: 0px;
     transition: right 0.3s ease-in-out;
   }
+
 
   .nav-links.open {
     right: 0;
