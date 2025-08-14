@@ -49,7 +49,7 @@ body {
   width: 0;
   height: 3px; /* underline thickness */
   background:radial-gradient(rgb(72, 157, 176),rgb(221, 99, 203),rgb(228, 228, 126)); /* underline color */
-  transition: width 0.3s ease;
+  transition: width 0.5s ease;
 }
 
 .nav-links li a:hover {
@@ -270,7 +270,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 200px;
   padding: 40px;
 }
 
@@ -278,6 +278,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-left: 100px;
 }
 
 .dev {
@@ -306,9 +307,10 @@ body {
 }
 
 .skilling {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   object-fit: contain;
+ 
 }
 
 /* PROJECTS */
