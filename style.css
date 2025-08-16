@@ -307,10 +307,21 @@ body {
 }
 
 .skilling {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   object-fit: contain;
+   border-radius: 50%;
+  padding: 1px;
+  background: linear-gradient(rgb(0, 238, 255), rgb(203, 115, 200)); /* gradient border */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+   
  
+}
+.skilling:hover{
+    transform: scale(1.2);
+  background: linear-gradient(rgb(29, 146, 179),rgb(193, 220, 77),rgb(206, 100, 155));
+  transition: 2s;
 }
 
 /* PROJECTS */
@@ -434,6 +445,7 @@ body {
   .photo,
   .skilling {
     margin: 0 auto;
+   
   }
 
   .myself,
