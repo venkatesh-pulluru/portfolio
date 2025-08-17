@@ -303,7 +303,14 @@ body {
 }
 
 .lang:hover {
-  background-color: #233554;
+  
+color:black;
+  transform: scale(1.2);
+  background: radial-gradient(rgb(29, 146, 179),rgb(193, 220, 77),rgb(206, 100, 155));
+  transition: 2s;
+
+
+
 }
 
 .skilling {
