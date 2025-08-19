@@ -286,6 +286,12 @@ body {
   color: #64FFDA;
   margin-bottom: 10px;
 }
+.dev:hover{
+  transform: scale(1.2);
+  color: rgb(198, 88, 194);
+  transition: 2s;
+
+}
 
 .skillsknown {
   display: flex;
