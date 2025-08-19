@@ -288,7 +288,7 @@ body {
 }
 .dev:hover{
   transform: scale(1.2);
-  color: rgb(198, 88, 194);
+  color: rgb(198, 88, 148);
   transition: 2s;
 
 }
