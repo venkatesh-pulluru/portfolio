@@ -64,8 +64,9 @@ body {
 
 .brand {
   font-size: 22px;
-  font-weight: bold;
+  
   color: #64FFDA;
+  font-style: italic;
 }
 
 
