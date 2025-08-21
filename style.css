@@ -50,10 +50,12 @@ body {
   height: 3px; /* underline thickness */
   background:radial-gradient(rgb(72, 157, 176),rgb(221, 99, 203),rgb(228, 228, 126)); /* underline color */
   transition: width 0.5s ease;
+ 
 }
 
 .nav-links li a:hover {
-  color: #64bdc7; /* optional: change text color */
+  color: #64bdc7;
+ /* optional: change text color */
 }
 
 .nav-links li a:hover::after {
@@ -333,6 +335,7 @@ color:black;
  
 }
 .skilling:hover{
+  padding: 5px;
     transform: scale(1.2);
   background: linear-gradient(rgb(29, 146, 179),rgb(193, 220, 77),rgb(206, 100, 155));
   transition: 2s;
