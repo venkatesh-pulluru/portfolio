@@ -281,7 +281,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 
 .dev {
@@ -323,10 +323,10 @@ color:black;
 }
 
 .skilling {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
   object-fit: contain;
-   border-radius: 50%;
+   border-radius: 10%;
   padding: 1px;
   background: linear-gradient(rgb(0, 238, 255), rgb(203, 115, 200)); /* gradient border */
   object-fit: cover;
