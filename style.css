@@ -315,7 +315,7 @@ body {
   
 color:black;
   transform: scale(1.2);
-  background: radial-gradient(rgb(29, 146, 179),rgb(193, 220, 77),rgb(206, 100, 155));
+  background: rgb(174, 238, 241);
   transition: 2s;
 
 
