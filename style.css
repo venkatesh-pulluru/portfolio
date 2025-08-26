@@ -54,7 +54,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #64bdc7;
+  color:rgb(88, 247, 215);
  /* optional: change text color */
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #64FFDA;
+  color:radial-gradient(rgb(107, 225, 232),rgb(229, 115, 233),rgb(129, 222, 207));
 }
 
 /* MOBILE NAVIGATION */
