@@ -345,17 +345,12 @@ color:black;
 /* PROJECTS */
 
 .created {
-  height: 200px;
- width: 400px;
+  
   color: rgb(208, 211, 214);
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: linear-gradient(to top, rgb(28, 26, 26), rgb(158, 155, 155));
-  border-radius: 5%;
+  
+  
   
 }
 .ecom{
