@@ -345,17 +345,62 @@ color:black;
 /* PROJECTS */
 
 .project {
-  
+  position: relative;
   margin-top: 30px;
   color: rgb(58, 54, 54);
   background: linear-gradient(to bottom, rgb(217, 213, 213), rgb(29, 28, 28));
   width: 30%;
   height: 250px;
   border-radius: 12px;
-  padding-top:90px ;
+  padding-top: 90px;
   margin-left: 550px;
+  overflow: hidden;
+}
 
-  }
+/* pseudo element for animated overlay */
+.project::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: rgb(183, 181, 181); /* hover color */
+  transition: height 0.6s ease;
+  z-index: 0;
+}
+
+.project:hover::before {
+  height: 100%; /* fills from bottom to top */
+}
+
+.titles,
+.aboutproject {
+  position: relative;
+  z-index: 1; /* keep text above overlay */
+  transition: color 0.6s ease;
+}
+
+.project:hover .titles,
+.project:hover .aboutproject {
+  color: rgb(58, 56, 56); /* text color changes on hover */
+}
+
+ .project {
+  margin-top: 30px;
+  color: rgb(58, 54, 54);
+  background: linear-gradient(to bottom, rgb(217, 213, 213), rgb(29, 28, 28));
+  width: 30%;
+  height: 250px; /* default height */
+  border-radius: 12px;
+  padding-top: 90px;
+  margin-left: 550px;
+  overflow: hidden; /* keeps it neat */
+  transition: height 0.6s ease, background 0.6s ease;
+}
+
+
+
 
   .titles {
     font-size: 24px;
