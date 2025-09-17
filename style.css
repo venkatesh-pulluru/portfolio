@@ -344,18 +344,6 @@ color:black;
 
 /* PROJECTS */
 
-.project {
-  position: relative;
-  margin-top: 30px;
-  color: rgb(58, 54, 54);
-  background: linear-gradient(to bottom, rgb(217, 213, 213), rgb(29, 28, 28));
-  width: 30%;
-  height: 250px;
-  border-radius: 12px;
-  padding-top: 90px;
-  margin-left: 550px;
-  overflow: hidden;
-}
 
 /* pseudo element for animated overlay */
 .project::before {
@@ -386,16 +374,18 @@ color:black;
   color: rgb(58, 56, 56); /* text color changes on hover */
 }
 
- .project {
+.project {
+  position: relative;
   margin-top: 30px;
   color: rgb(58, 54, 54);
   background: linear-gradient(to bottom, rgb(217, 213, 213), rgb(29, 28, 28));
-  width: 30%;
-  height: 250px; /* default height */
+  width: 90%; /* take most of the screen width */
+  max-width: 400px; /* don’t get too wide on large screens */
+  height: 250px;
   border-radius: 12px;
   padding-top: 90px;
-  margin-left: 550px;
-  overflow: hidden; /* keeps it neat */
+  margin: 30px auto; /* centers automatically */
+  overflow: hidden;
   transition: height 0.6s ease, background 0.6s ease;
 }
 
@@ -546,4 +536,10 @@ color:black;
   .nav-links li a {
     font-size: 18px;
   }
+ .project {
+    width: 95%;
+    padding-top: 60px;
+    height: auto; /* adjust height naturally */
+  }
 }
+
