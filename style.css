@@ -195,7 +195,7 @@ body {
   color: #64FFDA;
   margin-bottom: 10px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .heading::after {
@@ -269,6 +269,15 @@ body {
 }
 
 /* SKILLS SECTION */
+.boddering{
+   border: 5px solid black;
+   border-radius: 2%;
+   margin: 100px;
+   padding: 0px;
+   padding-top: 2px;
+   background: linear-gradient(to right top, rgb(76, 115, 102),rgb(6, 65, 99));
+
+}
 .part {
   display: flex;
   flex-wrap: wrap;
@@ -276,6 +285,7 @@ body {
   gap: 200px;
   padding: 40px;
 }
+
 
 .skillstotal {
   display: flex;
@@ -285,7 +295,7 @@ body {
 }
 
 .dev {
-  font-size: 28px;
+  font-size: 20px;
   color: #64FFDA;
   margin-bottom: 10px;
 }
